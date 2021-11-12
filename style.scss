@@ -1,6 +1,11 @@
 *{
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     background-color: rgb(235, 235, 229);
@@ -8,6 +13,7 @@ body{
     color: #FFFFFF;
     background-color: #13121A;
 }
+
 .menu{
     display: flex;
     align-items: center;
@@ -84,31 +90,35 @@ body{
         }
     }
 }
+
 .fondo{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    background: #1F1D2A ;
+    background: #13121A ;
     z-index: 10;
 }
+
 .contenedor{
     position: relative;
     top: 80px;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background-image: url(images/348806.jpg);
-    background-size: cover;
+    height: calc(100vh - 80px);
     margin-bottom: 80px;
+    img{
+        position: absolute;
+        top: calc(100vh - 600px);
+        left: calc(100vw - 430px);
+    }
     .arrow_container{
         position: absolute;
-        top: calc(100vh - 130px);
+        top: calc(100vh - 150px);
         left: calc(50% - 17.5px);
         width: 35px;
         height: 35px;
-        cursor: pointer;
         .arrow{
             width: 100%;
             height: 100%;
@@ -118,42 +128,84 @@ body{
             color: #E06339;
         }
     }
-    .objetivos{
-        position: relative;
-        top: calc(100% - 80px);
-        left: 0;
+}
+
+.toDo1{
+    width: 100%;
+    h2{
+        padding-left: 40px;
+
+    }
+    .margin-top{
+            width: 100%;
+            height: 80px;
+            background: rgb(94,86,87);
+            background: linear-gradient(180deg, rgba(42,32,46,1) 0%, rgba(19,18,26,1) 100%);
+            margin-bottom: 20px;
+    }
+    .input_container{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
         width: 100%;
-        height: 80px;
-        background: rgb(94,86,87);
-        background: linear-gradient(180deg, rgba(42,32,46,1) 0%, rgba(19,18,26,1) 100%);
-        padding-left: 20px;
-        padding-right: 20px;
-        h3{
-            margin: 10px;
+        height: 40px;
+        margin-bottom: 20px;
+        .search{
+            height: 100%;
+            width: 50%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, .2);
+            color: #FFFFFF;
+            border: none;
         }
-        h3:hover{
-            letter-spacing: 1px;
+        .search:focus{
+            border-bottom: 1px solid #E06339;
+            outline: none;
+        }
+        .search_icon, .voice_icon{
+            cursor: pointer;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 45px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .2);
+            padding: 0 10px;
+        }
+        .search_icon:hover, .voice_icon:hover{
+            color: #E06339;
+        }
+        .search_icon{
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .voice_icon{
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+    }
+    .card_container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1em;
+        margin: 20px;
+        .card{
+            background-color: #1a18262f;
+            padding: 10px;
+            img{
+                width: 100%;
+                height: 150px;
+            }
         }
     }
 }
-.toDo{
-    height: 500px;
-    width: 500px;
-    border: 1px solid red;
-    background-color: yellow;
-    color: red;
-}
+
 .toDo2{
     height: 500px;
-    width: 500px;
+    width: 100%;
     border: 1px solid yellow;
-    background-color: red;
     color: yellow;
 }
-@media(max-width:1035px){
+
+@media(max-width:1045px){
     .menu{
         .bar_container{
             display: inline-block;
@@ -202,7 +254,7 @@ body{
     }
 }
 
-@media(max-width:500px){
+@media(max-width:600px){
     .menu{
         .first_container{
             .menu_items{
@@ -235,6 +287,15 @@ body{
                 width: 35px;
                 height: 35px;
             }
+        }
+    }
+    .contenedor{
+        img{
+            position: absolute;
+            width: 208px;
+            height: 411px;
+            top: calc(100vh - 400px);
+            left: calc(100vw - 230px);
         }
     }
     .objetivos{
