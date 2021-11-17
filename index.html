@@ -25,7 +25,7 @@
                     </div>
                     <ul class="menu_item">
                         <li>
-                            <a href="#">Sobre nosotros</a>
+                            <a href="#2">Sobre nosotros</a>
                         </li>
                     </ul>
                     
@@ -53,7 +53,7 @@
     <div class="fondo"></div>
     <div class="contenedor">
         <picture>
-            <img src="images/prueba-img.png" type="">
+            <img src="images/prueba-img.png" alt="imagen principal">
         </picture>
         <a id="arrow" href="#1" class="arrow_container">
             <span class="iconify arrow" data-icon="bi:arrow-down-square"></span>
@@ -67,67 +67,57 @@
                 <input type="text" class="search" placeholder="Busque Aqui">
                 <span class="iconify voice_icon" data-icon="ic:outline-keyboard-voice"></span>
         </div>
-        <div class="card_container">
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="title">Nombre de producto</div>
-                <div class="price">
-                    $000
-                </div>
-            </div>
+        <div class="items header">
+            <p>#</p>
+            <p>Item</p>
+            <p>Cantidad</p>
+            <p>Accion</p>
+            <p>Total</p>
         </div>
+        <div class="items" id="items"></div>
+        <template id="template-carrito">
+            <p>id</p>
+            <p>Café</p>
+            <p>1</td>
+            <div class="buttons">
+                <button class="btn-info">
+                    +
+                </button>
+                <button class="btn-danger">
+                    -
+                </button>
+              </div>
+              <p>$500</p>
+        </template>
+        <div id="footer" class="items">
+            Carrito vacío - comience a comprar!
+        </div>
+        <template id="template-footer">
+            <p class="cantidad-producto">Total Productos</p>
+            <p>10</p>
+            <button id="vaciar-carrito">
+                    vaciar
+            </button>
+            <p class="total">$<span>5000</span></p>
+        </template>
+        <div class="container">
+            <div id="cards"></div>
+        </div>
+        <template id="template-card">
+            <div class="card_container">
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card_body">
+                        <h5 class="title">Nombre de producto</h5>
+                        <p class="price">$000</p>
+                        <button class="btn_comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </template>
     </div>
-    <div class="toDo2">
-        <h1>To do...</h1>
+    <div class="toDo2" id="2">
+        <h1>To do 2...</h1>
     </div>
 </body>
 </html>

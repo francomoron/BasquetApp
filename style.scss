@@ -97,7 +97,7 @@ body{
     left: 0;
     width: 100%;
     height: 80px;
-    background: #13121A ;
+    background: #100e1d;
     z-index: 10;
 }
 
@@ -137,7 +137,6 @@ body{
 
     }
     .margin-top{
-            width: 100%;
             height: 80px;
             background: rgb(94,86,87);
             background: linear-gradient(180deg, rgba(42,32,46,1) 0%, rgba(19,18,26,1) 100%);
@@ -182,17 +181,75 @@ body{
             border-bottom-right-radius: 30px;
         }
     }
-    .card_container{
+    .items{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 10px;
+        p, .buttons{
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .buttons{
+            button{
+                height: 30px;
+                border-radius: 10px;
+                border-style: none;
+                cursor: pointer;
+            }
+            .btn-info{
+                background-color: rgb(85, 115, 181);
+                margin-right: 5px;
+            }
+            .btn-danger{
+                background-color: rgb(194, 80, 80);
+                margin-left: 5px;
+            }
+        }
+    }
+    .items.header{
+        border-bottom: 1px solid #9d9d9d;
+    }
+    .items#footer{
+        border-top: 1px solid #9d9d9d;
+        .cantidad-producto{
+            grid-column: span 2;
+        }
+        #vaciar-carrito{
+            background-color: rgb(194, 80, 80);
+            border-style: none;
+            height: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+    #cards{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1em;
         margin: 20px;
-        .card{
-            background-color: #1a18262f;
-            padding: 10px;
-            img{
-                width: 100%;
-                height: 150px;
+        .card_container{
+            background-color: rgba(0, 0, 0, .1);
+            padding: 20px;
+            box-shadow: 1px 1px 5px #000 ;
+            .card{
+                img{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .card_body{
+                    .btn_comprar{
+                        background-color: #524897;
+                        height: 30px;
+                        border-radius: 10px;
+                        border-style: none;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
@@ -301,6 +358,13 @@ body{
     .objetivos{
         h3{
             font-size: 14px;
+        }
+    }
+    .toDo1{
+        .items{
+            p{
+                font-size: 10px;
+            }
         }
     }
 }
